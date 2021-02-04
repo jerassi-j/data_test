@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rating List</title>
+</head>
+<body>
+{% if rating_list %}
+    <ul>
+    {% for rating in rating_list %}
+        <li><a href="/rec/rating/{{ rating.r_id }}">{{ rating.r_id }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>there is no data</p>
+{% endif %}
+</body>
+</html>
